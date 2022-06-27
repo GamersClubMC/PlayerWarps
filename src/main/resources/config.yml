@@ -1,0 +1,81 @@
+settings:
+  # DON'T TOUCH THIS SETTING!
+  #-------------------
+  config-version: 1
+  #-------------------
+  # DON'T TOUCH THIS SETTING!
+
+  # Specifies the maximum amount of warps that can be set by a single player.
+  # If two player set 10 warps, said players can still place their remaining 10 warps.
+  # Setting it to -1 will let your players set unlimited warps. This ignores permissions as well.
+  max-pwarps: 20
+
+  # Upon warping to a pwarp, the player will receive 3 seconds of resistance.
+  # Useful if you wish to protect players in case of a kill-trap.
+  apply-resistance-on-warp: false
+
+  # How long should resistance last for.
+  # Duration is in seconds.
+  resistance-duration: 3
+
+  # Currently supported storage types:
+  # SQLite, H2, MySQL
+
+  # Database types can be written as lowercase or uppercase.
+  storage-type: "h2"
+
+  storage:
+    # The database name used for the file name for SQLite and H2, and the database name for MySQL.
+    db-name: "playerwarps"
+
+    # These next 4 settings are all specific to MySQL and serve no purpose to SQLite and H2 database types.
+    address: 127.0.0.1
+    port: 3306
+    user: root
+    pass: ''
+
+# All messages used in the plugin can be customized to your liking.
+# Accepts & and § for color codes.
+# '%s' is a placeholder for certain messages.
+messages:
+
+  # Sent when the command executor was console.
+  console-sender: "&cThis command cannot be executed from console!"
+
+  no-permission: "&cYou do not have permission to execute this command!"
+
+  db-change: "&cDetected a change in databases, data will not persist between databases!"
+
+  old-db-type: "&cPrevious database type: &r%s"
+  new-db-type: "&cNew database type: &r%s"
+
+  reload-done: "&aConfiguration reloaded."
+
+  color-list: "List of valid colors: %s"
+
+  specify-warp: "&cPlease specify a pwarp to remove!"
+
+  set-pw-usage: "&cUsage: /pwarp set (name) (color)"
+
+  list-warps: "&9List of registered pwarps:%s"
+
+  warp-already-exists: "&cA pwarp with that name already exists!"
+
+  invalid-warp: "&cThat pwarp does not appear to exist!"
+
+  invalid-name: "&cInvalid name specified!"
+
+  invalid-color: "&cThe color specified is invalid! Falling back to&f white&c!"
+
+  max-warps: "&cYou don't have permission to set any more pwarps!"
+
+  not-warp-owner: "&cEither you don't own the pwarp specified or it doesn't exist!"
+
+  warp-made: "&bPwarp created! To warp to it, run:"
+
+  warp-made-ex: "&f/pwarp %s"
+
+  warp-deleted: "&cPwarp successfully deleted."
+
+  reached-max: "&cYou cannot set more than %s warps!"
+

@@ -1,0 +1,38 @@
+name: PlayerWarps
+version: 1.0.0
+author: GamersClub
+main: me.gamersclub.playerwarps.PwarpMain
+api-version: 1.13
+
+prefix: PlayerWarps
+
+description: "Adds the ability for players to create their own custom warps"
+website: "https://gamersclub.gq"
+
+permissions:
+  playerwarps.reload:
+    default: op
+  playerwarps.setwarp:
+    default: true
+  playerwarps.delwarp:
+    default: true
+  playerwarps.amount:
+    default: false
+
+commands:
+  pwarp:
+    aliases: [pw,warp]
+    description: "The main command for the PlayerWarps plugin."
+    usage: "/pwarp (warp/set/remove) [name] {color}"
+  pwarps:
+    aliases: [pws, warps]
+    description: "Lists all pwarps"
+    usage: "/pwarps"
+  setpwarp:
+    aliases: [setpw, setwarp, createpw, createpwarp, createwarp]
+    description: "Creates your very own pwarp"
+    usage: "/setpwarp (name) [color]"
+  delpwarp:
+    aliases: [delpw, rmpwarp, rmpw, deletepw, deletepwarp, rmwarp, deletewarp, delwarp]
+    description: "Delete your own pwarp"
+    usage: "/delpwarp (warp)"
